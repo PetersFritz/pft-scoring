@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dementia-speech-pft"
+version = "0.1.0"
+description = "Phonemic fluency (PFT) trial scoring against the Leslie code system"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.0",
+    "pycountry",
+    "nltk",
+    "openpyxl",
+    "praatio>=6.0",
+]
+
+[tool.setuptools]
+packages = [
+    "dementia_speech",
+    "dementia_speech.io",
+    "dementia_speech.tasks",
+    "dementia_speech.tasks.PFT_new",
+]
+
+# The ONS baby-names reference file is resolved relative to the repo root
+# at runtime, so install this in editable mode (`pip install -e .`) to keep
+# that path valid.

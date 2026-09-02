@@ -1,0 +1,5 @@
+pandas>=2.0
+pycountry
+nltk
+openpyxl
+praatio>=6.0
